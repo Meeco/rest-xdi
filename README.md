@@ -1,6 +1,6 @@
 # REST XDI
 
-A simple way for web apps written in other programming languages to perform some operations on XDI graphs.
+A basic way for web apps written in other programming languages to perform some operations on XDI graphs using the XDI reference implementation classes. 
 
 ## Warning
 
