@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'rest-xdi'
+    version =  '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    mavenLocal()
+}
+
+configurations {
+    // xdi2 uses log4j; spring-boot uses logback by default, which conflicts
+    compile.exclude group: 'ch.qos.logback'
+    compile.exclude module: 'spring-boot-starter-logging'
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-log4j")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+
+    // XDI2
+    compile("xdi2:xdi2-client:0.4-SNAPSHOT")
+    compile("xdi2:xdi2-transport-http:0.4-SNAPSHOT")
+
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}
