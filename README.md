@@ -6,15 +6,21 @@ A basic way for web apps written in other programming languages to perform some 
 
 This is a very rough, proof of concept first cut.
 
+## Requirements
+
+`xdi2` https://github.com/projectdanube/xdi2
+
+Git clone it, run `mvn install` to install it into your local repository.
+
 ## Building
 
 This project uses Gradle. Run `./gradlew bootRun` to build and run.
 
-## Signatures
+## Examples
 
-Example:
+### Signatures
 
-Send a POST request to /signature/sign/=alice with the request body a serialized XDI graph:
+Send a POST request to `/signature/sign/=alice` with the request body a serialized XDI graph:
 
 	//=alice
 	=alice//<#age>
