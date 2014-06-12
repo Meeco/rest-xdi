@@ -38,8 +38,8 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-databind")
 
     // XDI2
-    compile("xdi2:xdi2-client:0.4-SNAPSHOT")
-    compile("xdi2:xdi2-transport-http:0.4-SNAPSHOT")
+    compile("xdi2:xdi2-client:0.4.2")
+    compile("xdi2:xdi2-transport-http:0.4.2")
 
     testCompile("junit:junit")
 }
