@@ -22,6 +22,11 @@ This project uses Gradle. Run `./gradlew bootRun` to build and run.
 
 Send a POST request to `/signature/sign/=alice` with the request body a serialized XDI graph:
 
+EG.
+
+`curl -X POST -d @sample.xdi http://0.0.0.0:8080/signature/sign/=alice`
+
+
 	//=alice
 	=alice//<#age>
 	=alice//<#photo>
