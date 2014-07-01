@@ -12,6 +12,8 @@ This is a very rough, proof of concept first cut.
 
 Git clone it, run `mvn install` to install it into your local repository.
 
+Project uses [Bootspring platform](http://projects.spring.io/spring-boot) 
+
 ## Building
 
 This project uses Gradle. Run `./gradlew bootRun` to build and run.
