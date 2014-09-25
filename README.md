@@ -10,9 +10,12 @@ This is a very rough, proof of concept first cut.
 
 `xdi2` https://github.com/projectdanube/xdi2
 
-Git clone it, run `mvn install` to install it into your local repository.
+Git clone `xdi2`, run `mvn install` to install `xdi2` into your local repository.
 
-Project uses [Bootspring platform](http://projects.spring.io/spring-boot) 
+Project also uses:
+* [Git-Flow branching model](https://github.com/nvie/gitflow)
+* [Bootspring platform](http://projects.spring.io/spring-boot) 
+
 
 ## Building
 
